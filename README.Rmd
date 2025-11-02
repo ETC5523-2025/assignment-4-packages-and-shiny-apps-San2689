@@ -67,3 +67,7 @@ if (requireNamespace("devtools", quietly = TRUE)) devtools::load_all(quiet = TRU
 
 Rendered from README.Rmd - rebuild with devtools::build_readme().
 
+## Package website
+
+<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-San2689/>
+
