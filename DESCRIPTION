@@ -1,13 +1,17 @@
 Package: pokevizSan2689
-Title: Interactive Pokémon Explorer
-Version: 0.0.0.9000
-Authors@R:
-    person("Sanch", "Anand", email = "meug0001@student.monash.edu", role = c("aut","cre"))
-Description: Explore Pokémon base stats by type and generation with an interactive Shiny app.
+Title: Explore Pokémon Base Stats by Type and Generation with a Shiny App
+Version: 0.0.1
+Authors@R: 
+    person(given = "Sanch", family = "Anand",
+           email = "meug0001@student.monash.edu",
+           role = c("aut","cre"))
+Description: Cleaned Pokémon dataset and an interactive Shiny app to explore base
+    stats by type and generation. Includes data cleaning script, vignette,
+    and documentation.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
+URL: https://github.com/ETC5523-2025/assignment-4-packages-and-shiny-apps-San2689
+BugReports: https://github.com/ETC5523-2025/assignment-4-packages-and-shiny-apps-San2689/issues
+Depends: R (>= 4.3)
 Imports:
     bslib,
     dplyr,
@@ -19,9 +23,9 @@ Imports:
 Suggests:
     knitr,
     rmarkdown,
-    devtools,
-    remotes
-VignetteBuilder: knitr
-Depends: 
-    R (>= 3.5)
+    devtools
+Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+VignetteBuilder: knitr
