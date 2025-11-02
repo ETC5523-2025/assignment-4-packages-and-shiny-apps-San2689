@@ -2,54 +2,68 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+collapse = TRUE,
+comment = "#>",
+fig.path = "man/figures/README-",
+out.width = "100%"
 )
 ```
 
-# assignment4packagesSan2689
+# pokevizSan2689
 
-<!-- badges: start -->
-<!-- badges: end -->
+<!-- badges: start --> <!-- badges: end -->
 
-The goal of assignment4packagesSan2689 is to ...
+pokevizSan2689 is a small teaching package for ETC5523.
+It provides a cleaned Pokémon dataset (pokemon) and a Shiny app to explore
+base stats by type and generation.
 
 ## Installation
 
-You can install the development version of assignment4packagesSan2689 from [GitHub](https://github.com/) with:
+Install the package from GitHub:
 
-``` r
-# install.packages("pak")
-pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-San2689")
+```{r, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("ETC5523-2025/assignment-4-packages-and-shiny-apps-San2689")
 ```
 
-## Example
+## Quick start
 
-This is a basic example which shows you how to solve a common problem:
+Launch the Shiny app:
 
-```{r example}
-library(assignment4packagesSan2689)
-## basic example code
+```{r}
+library(pokevizSan2689)
+run_pokeviz()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Work with the bundled dataset:
 
-```{r cars}
-summary(cars)
+```{r}
+library(dplyr)
+library(ggplot2)
+
+pokemon %>%
+  count(type1, sort = TRUE) %>%
+  head(10)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+pokemon %>%
+  filter(type1 %in% c("fire","water","grass")) %>%
+  ggplot(aes(attack, defense, colour = type1)) +
+  geom_point(alpha = 0.6) +
+  theme_minimal()
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+## Development
+
+During development you can load the package without installing:
+
+```{r}
+if (requireNamespace("devtools", quietly = TRUE)) devtools::load_all(quiet = TRUE)
+```
+
+Rendered from README.Rmd - rebuild with devtools::build_readme().
+
