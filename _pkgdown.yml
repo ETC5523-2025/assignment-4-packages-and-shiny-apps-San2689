@@ -1,0 +1,22 @@
+# _pkgdown.yml
+url: https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-San2689/
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    primary: "#6C63FF"
+    base_font: {google: "Inter"}
+navbar:
+  structure:
+    left:  [reference, articles]
+    right: [github]
+home:
+  title: pokevizSan2689
+  description: >
+    A small teaching package for ETC5523. It bundles a cleaned Pokémon dataset
+    and a Shiny app to explore base stats by type and generation.
+
+
+
+
+
