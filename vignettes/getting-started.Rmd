@@ -1,19 +1,19 @@
 ---
-title: "getting-started"
+title: "Getting started with pokevizSan2689"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{getting-started}
+  %\VignetteIndexEntry{Getting started with pokevizSan2689}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+collapse = TRUE,
+comment = "#>"
 )
 ```
 
 ```{r setup}
-library(assignment4packagesSan2689)
+library(pokevizSan2689)   
 ```
