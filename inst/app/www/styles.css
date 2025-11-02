@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* Make sidebar stand out */
+.sidebar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+/* Make headings purple and bold */
+h4, h3, h2 {
+  color: #6C63FF;
+  font-weight: 600;
+}
+
+/* Add spacing below plot area */
+#scatter {
+  margin-bottom: 20px;
+}
+
+/* Style help text for clarity */
+.help-block {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Improve table look */
+table.dataTable {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
